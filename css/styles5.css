@@ -1,0 +1,231 @@
+body {
+    background-color: grey;
+}
+
+.page {
+    background-color: lightslategray;
+    margin: auto;
+    max-height: 80em;
+    max-width: 140em;
+    border: 5px solid #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "n n n n n n n n n n n n";
+}
+
+header {
+    border-bottom: #000 solid 5px;
+    grid-area: h;
+    max-height: 170px;
+    background-color: rgb(131, 131, 245);
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    display: grid;
+    grid-template-columns: 2fr 1fr 6fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "titre5 image5 nav";
+    gap: 10px;
+}
+.titre5
+{
+    font-size: 2em;
+    padding-top: 30px;
+    text-align: left;
+}
+.image5 img
+{
+    padding-top: 10px;
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    float: right;
+}
+nav {
+    font-size: 1em;
+    background-color: rgb(131, 131, 245);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    " cel11 cel22 cel33 cel44 cel5 cel6 ";
+    font-family: 'Dancing Script', cursive;
+    grid-area: nav;
+}
+.cel11 {
+    grid-area: cel11;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel22 {
+    grid-area: cel22;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel33 {
+    grid-area: cel33;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel44 {
+    grid-area: cel44;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel5 {
+    grid-area: cel5;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel6 {
+    grid-area: cel6;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel11:hover, .cel22:hover, .cel33:hover, .cel44:hover, .cel5:hover, .cel6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: rgb(226, 85, 29);
+    color: rgb(204, 68, 9);
+}
+
+footer {
+    font-size: 1.5em;
+    border-top: 5px solid #000;
+    grid-area: n;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    " cel1 cel2 cel3 cel4 ";
+    font-family: 'Dancing Script', cursive;
+}
+.cel1 {
+    grid-area: cel1;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel2 {
+    grid-area: cel2;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel3 {
+    grid-area: cel3;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel4 {
+    grid-area: cel4;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel4:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(226, 85, 29);
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+}
+
+main {
+    grid-area: m;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: yellow;
+}
+
+.item {
+    border: 2px solid #000;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 430px) {
+    body {
+        font-size: 14px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header"
+        "main" "footer";
+    }
+
+    header {
+        max-height: 300px;
+    }
+
+    .titre5 {
+        font-size: 1.5em;
+        padding-top: 15px;
+    }
+
+    .image5 img {
+        max-width: 80px;
+        max-height: 80px;
+        padding-top: 5px;
+    }
+
+    nav {
+        font-size: 0.6em;
+        grid-template-columns: 1fr;
+        grid-template-areas: "cel11 cel22" "cel33 cel44" "cel5 cel6";
+    }
+
+    .cel11, .cel22, .cel33, .cel44, .cel5, .cel6 {
+        padding-top: 20px;
+    }
+
+    footer {
+        font-size: 1.2em;
+    }
+
+    .cel1, .cel2, .cel3, .cel4 {
+        padding-top: 15px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .item {
+        font-size: 12px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .image5 img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}

@@ -1,0 +1,287 @@
+body {
+    background-color: grey;
+}
+
+.page {
+    background-color: lightslategray;
+    margin: auto;
+    max-height: 70em;
+    max-width: 120em;
+    border: 5px solid #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        "n n n n n n n n n n n n";
+}
+
+header {
+    grid-area: h;
+    max-height: 120px;
+    background-color: rgb(131, 131, 245);
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    display: grid;
+    grid-template-columns: 2fr 1fr 6fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "titre5 image5 nav";
+    gap: 10px;
+}
+.titre5
+{
+    padding-top: 30px;
+    font-size: 2em;
+    text-align: left;
+}
+.image5 img
+{
+    padding-top: 10px;
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    float: right;
+}
+nav {
+    font-size: 1em;
+    background-color: rgb(131, 131, 245);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    " cel11 cel22 cel33 cel44 cel5 cel6 ";
+    font-family: 'Dancing Script', cursive;
+    grid-area: nav;
+}
+.cel11 {
+    grid-area: cel11;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel22 {
+    grid-area: cel22;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel33 {
+    grid-area: cel33;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel44 {
+    grid-area: cel44;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel5 {
+    grid-area: cel5;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel6 {
+    grid-area: cel6;
+    text-align: center;
+    padding-top: 40px;
+}
+.cel11:hover, .cel22:hover, .cel33:hover, .cel44:hover, .cel5:hover, .cel6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: rgb(226, 85, 29);
+    color: rgb(204, 68, 9);
+}
+
+footer {
+    font-size: 1.5em;
+    border-top: 5px solid #000;
+    grid-area: n;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    " cel1 cel2 cel3 cel4 ";
+    font-family: 'Dancing Script', cursive;
+}
+.cel1 {
+    grid-area: cel1;
+    text-align: center;
+    padding-top: 25px;
+}
+.cel2 {
+    grid-area: cel2;
+    text-align: center;
+    padding-top: 25px;
+}
+.cel3 {
+    grid-area: cel3;
+    text-align: center;
+    padding-top: 25px;
+}
+.cel4 {
+    grid-area: cel4;
+    text-align: center;
+    padding-top: 25px;
+}
+.cel4:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(226, 85, 29);
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: purple;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: blue;
+}
+
+main {
+    grid-area: m;
+    display: grid;
+    background-color: rgb(211, 202, 191);
+    font-family: 'Playfair Display', serif;
+}
+
+.tableau {
+    height: 100%;
+    width: 100%;
+}
+
+.professions-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2em;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+.professions-grid > div {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.professions-grid > .header {
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
+
+.professions-grid > div:nth-child(4n-1),
+.professions-grid > div:nth-child(4n) {
+    background-color: #f2f2f2;
+}
+
+.professions-grid > div:nth-child(4n-3),
+.professions-grid > div:nth-child(4n-2) {
+    background-color: #e0e0e0;
+}
+
+.professions-grid > div:nth-last-child(2) {
+    text-align: center;
+    font-weight: bold;
+}
+
+.professions-grid > div:last-child {
+    text-align: center;
+}
+
+
+.source1
+{
+    color: salmon;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.source1 a{
+    color:salmon;
+}
+
+@media (max-width: 430px) {
+    body {
+        background-color: lightgrey;
+    }
+
+    .page {
+        max-width: 100%;
+        max-height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "h"
+            "m"
+            "n";
+        border: none;
+        box-shadow: none;
+    }
+
+    header {
+        grid-template-columns: 1fr 3fr;
+        max-height: 80px;
+    }
+
+    .titre5 {
+        padding-top: 10px;
+        font-size: 1.5em;
+    }
+
+    .image5 img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    nav {
+        font-size: 0.8em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .cel11, .cel22, .cel33, .cel44, .cel5, .cel6 {
+        padding-top: 20px;
+    }
+
+    footer {
+        font-size: 1em;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cel1, .cel2, .cel3, .cel4 {
+        padding-top: 15px;
+    }
+
+    .professions-grid {
+        grid-template-columns: 1fr;
+        font-size: 0.8em;
+    }
+
+    .professions-grid > div {
+        padding: 10px;
+    }
+
+    .source1 {
+        font-size: 1em;
+    }
+
+    .source1 a {
+        font-size: 1em;
+    }
+}
+
+
